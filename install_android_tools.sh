@@ -15,4 +15,4 @@ pip install buildozer python-for-android
 
 # Trigger Buildozer so it downloads the Android SDK/NDK r25b and API 30
 # as specified in buildozer.spec
-buildozer android p4a -- --help
+yes | buildozer android p4a -- --help
