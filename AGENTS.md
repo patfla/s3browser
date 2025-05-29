@@ -1,11 +1,11 @@
 # AGENTS.md
 ## Setup
 
-Run the following script to install Buildozer, python-for-android, and Android SDK/NDK:
+- Run the following script to install Buildozer, python-for-android, and Android SDK/NDK:
 
-```sh
 chmod u+x setup.sh
 ./setup.sh
+buildozer android debug
 
 
 ## Setup
