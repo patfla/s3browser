@@ -24,9 +24,9 @@ try:
     from plyer import filechooser
 except Exception:
     filechooser = None
-ACCESS_KEY = ""
-SECRET_KEY = ""
-REGION_NAME = "us-east-1"
+ACCESS_KEY = os.environ.get("AWS_ACCESS_KEY_ID")
+SECRET_KEY = os.environ.get("AWS_SECRET_ACCESS_KEY")
+REGION_NAME = os.environ.get("AWS_DEFAULT_REGION", "us-east-1")
 
 
 session = boto3.session.Session(
@@ -234,7 +234,7 @@ class codex1App(App):
                 name = os.path.basename(path)
                 key = self.current_prefix + name
                 config = boto3.s3.transfer.TransferConfig(multipart_threshold=1024*25, max_concurrency=4)
-                s3.upload_file(path, self.current_bucket, key, Callback=ProgressPercentage(self), Config=config)
+                s3.upload_file(path, self.current_bucket, key, Callback=ProgressPercentage(path,self), Config=config)
             Clock.schedule_once(lambda dt: self.after_upload(len(paths)))
         threading.Thread(target=upload_thread).start()
 
@@ -262,7 +262,7 @@ class codex1App(App):
                 key = self.current_prefix + entry["name"]
                 path = os.path.join(folder, entry["name"])
                 s3.download_file(self.current_bucket, key, path,
-                                 Callback=ProgressPercentageDownload(self))
+                                 Callback=ProgressPercentageDownload(entry[¨size¨],self))
                 Clock.schedule_once(lambda dt: self.after_download(len(selected)))
         threading.Thread(target=download_thread).start()
     # def _download_to(self, paths, selected):
