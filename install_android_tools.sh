@@ -6,7 +6,7 @@ sudo apt update
 sudo apt install -y python3-pip python3-setuptools python3-venv git zip unzip wget openjdk-21-jdk
 
 # Create and activate a virtual environment for Buildozer
-python3 -m venv buildozer-env
+# python3 -m venv buildozer-env
 source buildozer-env/bin/activate
 pip install --upgrade pip
 
