@@ -1,7 +1,7 @@
 # Update and install system dependencies
 sudo apt update
 sudo apt install -y python3-pip python3-setuptools git zip unzip openjdk-21-jdk
-
+pip install cython setuptools
 
 
 # Optional but recommended: create and activate a virtual environment
