@@ -10,7 +10,10 @@
 
 ## Build
 - Run `buildozer android debug` to generate an APK from `main.py` using `buildozer.spec`.
-  `buildozer android debug`
+  ```sh
+  source buildozer-env/bin/activate
+  buildozer android debug
+  ```
   
 ## Optional run
 - If an emulator or device is available, run `buildozer android debug deploy run` to install and launch the app.
