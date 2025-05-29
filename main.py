@@ -262,7 +262,7 @@ class codex1App(App):
                 key = self.current_prefix + entry["name"]
                 path = os.path.join(folder, entry["name"])
                 s3.download_file(self.current_bucket, key, path,
-                                 Callback=ProgressPercentageDownload(entry[¨size¨],self))
+                                 Callback=ProgressPercentageDownload(entry["size"],self))
                 Clock.schedule_once(lambda dt: self.after_download(len(selected)))
         threading.Thread(target=download_thread).start()
     # def _download_to(self, paths, selected):
