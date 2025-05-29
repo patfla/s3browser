@@ -1,5 +1,8 @@
 #Virtual env
 buildozer-env/
+# Additional virtualenvs
+venv/
+.venv/
 # build artifacts
 *.apk
 /bin/
@@ -7,9 +10,15 @@ buildozer-env/
 __pycache__/
 *.pyc
 
+# Log files
+*.log
+
 # Buildozer output
 dist/
 build/
 .buildozer/
 *.keystore
+
+# Android build cache
+.gradle/
 
