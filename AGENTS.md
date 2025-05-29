@@ -3,10 +3,10 @@
 
 - Run the following script to install Buildozer, python-for-android, and Android SDK/NDK:
 
-chmod u+x setup.sh
-./setup.sh
-buildozer android debug
-
+   ```sh
+   chmod u+x setup.sh
+   ./setup.sh
+   ```
 
 ## Setup
 - Ensure Buildozer (and its dependencies such as python-for-android, Android SDK/NDK) are installed before the session’s network access is disabled.  
