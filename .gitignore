@@ -1,4 +1,12 @@
+#Virtual env
 buildozer-env/
+# build artifacts
 *.apk
 /bin/
+# Python cache
 __pycache__/
+*.pyc
+
+# Buildozer output
+dist/
+build/
