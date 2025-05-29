@@ -11,5 +11,5 @@ sudo apt install -y python3-pip python3-setuptools git zip unzip openjdk-21-jdk
 # Install Buildozer using pip
 pip install --upgrade pip
 pip install --no-index --find-links deps/ buildozer-1.5.0-py3-none-any.whl
-pip install buildozer
+# pip install buildozer
 
