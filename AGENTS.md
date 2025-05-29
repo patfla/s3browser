@@ -1,10 +1,10 @@
 # AGENTS.md
 ## Setup
-- Ensure Buildozer (and its dependencies such as python-for-android, Android SDK/NDK) are installed before the session’s network access is disabled.  
-  *If these tools aren’t preinstalled or provided via a setup script, the build will fail.*
+- Run `./setup.sh` to install Buildozer and the Android toolchain.
 
 ## Setup
-- Run `./setup.sh` to install Buildozer and the Android toolchain.
+- Ensure Buildozer (and its dependencies such as python-for-android, Android SDK/NDK) are installed before the session’s network access is disabled.  
+  *If these tools aren’t preinstalled or provided via a setup script, the build will fail.*
 
 ## Build
 - Run `buildozer android debug` to generate an APK from `main.py` using `buildozer.spec`.
