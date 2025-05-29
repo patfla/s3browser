@@ -10,3 +10,6 @@ __pycache__/
 # Buildozer output
 dist/
 build/
+.buildozer/
+*.keystore
+

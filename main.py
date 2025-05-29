@@ -26,12 +26,14 @@ except Exception:
     filechooser = None
 ACCESS_KEY = os.environ.get("AWS_ACCESS_KEY_ID")
 SECRET_KEY = os.environ.get("AWS_SECRET_ACCESS_KEY")
+SESSION_TOKEN = os.environ.get("AWS_SESSION_TOKEN")
 REGION_NAME = os.environ.get("AWS_DEFAULT_REGION", "us-east-1")
 
 
 session = boto3.session.Session(
     aws_access_key_id=ACCESS_KEY,
     aws_secret_access_key=SECRET_KEY,
+    aws_session_token=SESSION_TOKEN,
     region_name=REGION_NAME,
 )
 s3 = session.client("s3")
