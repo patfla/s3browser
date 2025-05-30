@@ -33,7 +33,7 @@ android.enable_multiprocess = True
 
 # Remove or comment out these lines if they are present:
 # android.no-byte-compile-python = 1
-p4a.local_recipes = ./recipes
+p4a.local_recipes = ./p4a_recipes
 
 [buildozer]
 # disable root warning for CI
