@@ -12,7 +12,11 @@ class PyjniusRecipe(CythonRecipe):
     depends = [('genericndkbuild', 'sdl2'), 'six']
     site_packages_name = 'jnius'
 
-    patches = [('genericndkbuild_jnienv_getter.patch', will_build('genericndkbuild'))]
+    # ADD YOUR PATCH HERE!
+    patches = [
+        ('genericndkbuild_jnienv_getter.patch', will_build('genericndkbuild')),
+        ('pyjnuis_long_fix.patch', None) # Add this line
+    ]
 
     def get_recipe_env(self, arch):
         env = super().get_recipe_env(arch)
